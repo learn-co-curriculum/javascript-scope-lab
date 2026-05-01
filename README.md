@@ -34,6 +34,10 @@ In this lab, you will practice declaring variables in **global scope**, creating
 directory in the terminal, then run `code .` to open the files in Visual Studio
 Code.
 
+To run the test suite, run `npm install` once then `npm test` each time you want to check your work.
+
+You can also run index.js using `node index.js` or opening the HTML file in browser and using DevTools. This will allow you to see errors or console.logs you add while debugging.
+
 These are your tasks:
 
 - `burgers`: Declare a variable in global scope called `burgers` using the `const` keyword and assign it the value of an array that has the following 2 elements: `'Hamburger'` and `'Cheeseburger'`.

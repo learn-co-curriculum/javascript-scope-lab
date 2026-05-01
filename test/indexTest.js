@@ -56,16 +56,16 @@ describe('index.js', function() {
 
   describe('if statement', function() {
     it('has a condition with the value of true', function() {
-      expect(js).to.match(/if\(true\)/, "Expected the use of an if statement whose condition has the value of true");
+      expect(js).to.match(/if\s*\(\s*true\s*\)/, "Expected the use of an if statement whose condition has the value of true");
     });
 
     it("creates a block-scoped variable named anotherNewBurger using the const keyword and assigns it the value 'Maple Bacon Burger'", function() {
-      expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*const[ \n]+anotherNewBurger[ \n]*=[ \n]*['"`]Maple Bacon Burger['"`](.|\n)*\}/, "Expected anotherNewBurger to be a block-scoped variable that is declared inside of the if statement using const and has the value 'Maple Bacon Burger'");
+      expect(js).to.match(/if\s*\(\s*true\s*\)[ \n]*\{(.|\n)*const[ \n]+anotherNewBurger[ \n]*=[ \n]*['"`]Maple Bacon Burger['"`](.|\n)*\}/, "Expected anotherNewBurger to be a block-scoped variable that is declared inside of the if statement using const and has the value 'Maple Bacon Burger'");
     });
 
     it("uses the .push() array method to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array", function() {
       expect(burgers.includes('Maple Bacon Burger')).to.equal(true, "Expected the burgers array to have the string 'Maple Bacon Burger' as one of its elements");
-      expect(js).to.match(/if\(true\)[ \n]*\{(.|\n)*.push\((.|\n)+\)(.|\n)*\}/, "Expected the use of the .push() array method, inside of the if statement, to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array");
+      expect(js).to.match(/if\s*\(\s*true\s*\)[ \n]*\{(.|\n)*.push\((.|\n)+\)(.|\n)*\}/, "Expected the use of the .push() array method, inside of the if statement, to add anotherNewBurger, which has the value of 'Maple Bacon Burger', to the burgers array");
     });
   });
 
